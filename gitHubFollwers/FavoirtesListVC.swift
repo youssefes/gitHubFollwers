@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  favoirtesListVC.swift
 //  gitHubFollwers
 //
 //  Created by youssef on 5/26/20.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class FavoirtesListVC: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBlue
     }
-
-
+    
 }
-
