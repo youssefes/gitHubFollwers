@@ -15,8 +15,26 @@ class follwerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.isHidden = false
+        
         navigationController?.navigationBar.prefersLargeTitles = true
+        guard let user = username else {
+            return
+        }
+        NetworkManger.shared.getFollwers(for: user, page: 1) { (followers, errorMassage) in
+            guard let follower = followers else {
+                self.presentAlertOnMainthread(title: "bad staf Happen", massage: errorMassage!.rawValue, buttonTitle: "ok")
+                return
+            }
+            print(follower.count)
+            print(follower)
+        }
        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
 }

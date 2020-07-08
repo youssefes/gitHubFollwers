@@ -27,7 +27,7 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     func createDismissKeywordGesTap(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(view.endEditing))
