@@ -12,6 +12,7 @@ class GFTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame : frame)
+        configration()
     }
     
     required init?(coder: NSCoder) {
@@ -31,7 +32,7 @@ class GFTextField: UITextField {
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
         autocorrectionType = .no
-        
+        returnKeyType = .go
         textAlignment = .center
         backgroundColor = .tertiarySystemBackground
         font = UIFont.preferredFont(forTextStyle: .title2)
