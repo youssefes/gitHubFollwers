@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Followers : Codable {
+struct Followers : Codable , Hashable{
     var login : String
     var avatarUrl : String
 }

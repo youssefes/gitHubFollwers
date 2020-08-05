@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum  ErrorMassages : String {
+enum  GFError : String, Error {
     case inValidUsername = "this username created request is invalid , please try agine"
     case unableToComplet = "Unable to complete your request , please check your conection"
     case invalRespond = "invaild respond from the server , please try agine...."
